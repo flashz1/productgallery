@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@layer base {
+  .layout-side {
+    @apply flex flex-col px-10 pt-24;
+  }
+
+  .left-side {
+  }
+
+  .right-side {
+    @apply bg-gray-50;
+  }
+
+  .form-label {
+    @apply text-sm leading-5 font-medium text-gray-700 cursor-pointer;
+  }
+
+  .form-element {
+    @apply block w-full text-base leading-6 py-[9px] px-[13px] font-normal border border-gray-300 rounded-md shadow-sm;
+  }
+}
