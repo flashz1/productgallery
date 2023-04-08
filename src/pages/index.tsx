@@ -60,13 +60,17 @@ const Home = () => {
         </div>
         {filteredProducts ? (
           <div className="flex flex-row flex-wrap w-full">
-            {filteredProducts.map((item) => (
-              <ProductItem key={item.id} {...item} />
-            ))}
+            {filteredProducts.length ? (
+              filteredProducts.map((item) => (
+                <ProductItem key={item.id} {...item} />
+              ))
+            ) : (
+              <div className="py-4 px-4">
+                There are no items that correspond to your filters.
+              </div>
+            )}
           </div>
-        ) : (
-          'There are no items that correspond to your filters.'
-        )}
+        ) : null}
       </div>
     </Layout>
   )
